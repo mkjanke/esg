@@ -1,7 +1,5 @@
 ﻿<!DOCTYPE html>
-
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,33 +54,35 @@
     <div class="container">
         <nav class="navbar navbar-default">
             <div class="container-fluid">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="" ">ESG</a>
-                    <a class="nav-item nav-link" href="../html/metrics.html">Metrics </a>
-                    <a class="nav-item nav-link active" href="../html/nfrs.html">NFR's <span class="sr-only">(current)</span></a>
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="../index.html">ESG</a>
                 </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="../html/metrics.html">Metrics</a></li>
+                    <li class="active"> <a href="../html/nfrs.html">NFR's</li>
+                </ul>
             </div>
         </nav>
 
-            <div id="wait">
-                <p>Please Wait...</p>
-            </div>
-            <div id="showData" class="table-responsive">
-                <table width="100%" class="display" id="NFRTable" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th>Index</th>
-                            <th>Category</th>
-                            <th>Context</th>
-                            <th>Goals</th>
-                            <th>Rationale</th>
-                            <th>Requirement</th>
-                            <th>Scale</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                </table>
-            </div>
+        <div id="wait">
+            <p>Please Wait...</p>
+        </div>
+        <div id="showData" class="table-responsive">
+            <table width="100%" class="display" id="NFRTable" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Category</th>
+                        <th>Context</th>
+                        <th>Goals</th>
+                        <th>Rationale</th>
+                        <th>Requirement</th>
+                        <th>Scale</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
     </div>
  
 </body>
