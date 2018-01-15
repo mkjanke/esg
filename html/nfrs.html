@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+
+    <script>
+
+        var jsonObjNFR = {};
+        var nfr_json_file = "../nfr/nfr-body.json";
+
+        //These functions Use
+        //jQuery - get JSON from server
+        //datatables.net library - load and populate Metric table
+
+        function LoadNFRSFromJSON() {
+            $.get(nfr_json_file, function (data) {
+                jsonObjNFR = data.Requirements;
+                console.log(data);
+                console.log(jsonObjNFR);
+
+                $('#NFRTable').DataTable({
+                    "data": jsonObjNFR,
+                    "columns": [
+                        { "data": "Index" },
+                        { "data": "Category" },
+                        { "data": "Context" },
+                        { "data": "Goals" },
+                        { "data": "Rationale" },
+                        { "data": "Requirement" },
+                        { "data": "Scale" },
+                        { "data": "Status" }
+                    ]
+                });
+            }, 'json');
+            //Nuke the 'wait' messsage
+            $('#wait').text("");
+        }
+
+        $(document).ready(function () {
+            LoadNFRSFromJSON();
+        })
+    </script>
+
+    <title>ESG JSON</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="" ">ESG</a>
+                    <a class="nav-item nav-link" href="../html/metrics.html">Metrics </a>
+                    <a class="nav-item nav-link active" href="../html/nfrs.html">NFR's <span class="sr-only">(current)</span></a>
+                </div>
+            </div>
+        </nav>
+
+            <div id="wait">
+                <p>Please Wait...</p>
+            </div>
+            <div id="showData" class="table-responsive">
+                <table width="100%" class="display" id="NFRTable" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Index</th>
+                            <th>Category</th>
+                            <th>Context</th>
+                            <th>Goals</th>
+                            <th>Rationale</th>
+                            <th>Requirement</th>
+                            <th>Scale</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+    </div>
+ 
+</body>
+</html>

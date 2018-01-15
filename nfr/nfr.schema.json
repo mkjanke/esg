@@ -4,8 +4,12 @@
   "title": "Non Functional Requirement",
   "description": "A representation of a non-functional requirement, loosely based on Simmons/Intel 2011",
   "properties": {
-    "required": [ "Category", "Context", "Goals", "Rationale", "Requirement", "Scale", "Status" ],
+    "required": [ "Index", "Category", "Context", "Goals", "Rationale", "Requirement", "Scale", "Status" ],
     "type": "object",
+    "Index": {
+      "type": "string",
+      "description": "Unique identifier."
+    },
     "Category": {
       "enum": [ "Resiliency", "Recoverability", "Scalability", "Maintainability" ],
       "description": "Category: A text field representing the category that the requirement is classified under in the NFR Model."

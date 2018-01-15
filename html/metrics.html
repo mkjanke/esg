@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+
+    <script>
+// ToDO figure out how to load these from another .js file
+//        import { LoadMetricsFromJSON, jsonObjMetrics, metrics_json_file } from '../js/util.js';
+
+        var jsonObjMetrics = {}; //yes, I know thses are global
+        var metrics_json_file = "../req/req-metric.json";
+
+        //These functions Use
+        //jQuery - get JSON from server
+        //datatables.net library - load and populate Metric table
+
+        function LoadMetricsFromJSON() {
+            $.get(metrics_json_file, function (data) {
+                jsonObjMetrics = data.Metrics;
+                $('#MetricTable').DataTable({
+                    "data": jsonObjMetrics,
+                    "columns": [
+                        { "data": "METRIC-LABEL" },
+                        { "data": "METRIC" },
+                        {
+                            "data": "REPLACEDBY",
+                            "defaultContent": ""
+                        },
+                        {
+                            "data": "REPLACES",
+                            "defaultContent": ""
+                        }
+                    ]
+                });
+            }, 'json');
+            //Nuke the 'wait' messsage
+            $('#wait').text("");
+        }
+
+        $(document).ready(function () {
+            LoadMetricsFromJSON();
+        })
+    </script>
+
+    <title>ESG JSON</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="" ">ESG</a>
+                    <a class="nav-item nav-link active" href="../html/metrics.html">Metrics <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="../html/nfrs.html">NFR's</a>
+                </div>
+            </div>
+        </nav>
+
+        <div id="wait">
+            <p>Please Wait...</p>
+        </div>
+        <div id="showData" class="table-responsive">
+            <table width="100%" class="display" id="MetricTable" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Label</th>
+                        <th>Metric</th>
+                        <th>Replaced by</th>
+                        <th>Replaces</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+ 
+</body>
+</html>
