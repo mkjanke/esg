@@ -23,7 +23,8 @@
     },
     {
       "METRIC-LABEL": "REC-COM-A1",
-      "METRIC": "During recovery, the user detectable loss of business functionality will be no more than 60 seconds."
+      "METRIC": "During recovery, the user detectable loss of business functionality will be no more than 60 seconds.",
+      "replaces": "REC-COM-B1"
     },
     {
       "METRIC-LABEL": "REC-COM-A2",
@@ -35,7 +36,8 @@
     },
     {
       "METRIC-LABEL": "REC-COM-B1",
-      "METRIC": "During recovery, the user detectable loss of business functionality will be no more than four business hours."
+      "METRIC": "During recovery, the user detectable loss of business functionality will be no more than four business hours.",
+      "replacedby": "REC-COM-A1"
     },
     {
       "METRIC-LABEL": "REC-COM-C1",
@@ -55,7 +57,8 @@
     },
     {
       "METRIC-LABEL": "REC-CON-A2",
-      "METRIC": "No data modifications will be lost."
+      "METRIC": "No data modifications will be lost.",
+      "replaces": "REC-CON-B2"
     },
     {
       "METRIC-LABEL": "REC-CON-A3",
@@ -67,7 +70,9 @@
     },
     {
       "METRIC-LABEL": "REC-CON-B2",
-      "METRIC": "No more than the most recent fifteen minutes of data modifications will be lost."
+      "METRIC": "No more than the most recent fifteen minutes of data modifications will be lost.",
+      "replaces": "REC-CON-D1",
+      "replacedby": "REC-CON-A2"
     },
     {
       "METRIC-LABEL": "REC-CON-B3",
@@ -75,7 +80,8 @@
     },
     {
       "METRIC-LABEL": "REC-CON-D1",
-      "METRIC": "No more than one business day of data modifications will be lost."
+      "METRIC": "No more than one business day of data modifications will be lost.",
+      "replacedby": "REC-CON-B2"
     },
     {
       "METRIC-LABEL": "REC-CON-D2",
@@ -83,7 +89,8 @@
     },
     {
       "METRIC-LABEL": "REC-LOG-A1",
-      "METRIC": "No more than the most recent one hour of data modifications will be lost."
+      "METRIC": "No more than the most recent one hour of data modifications will be lost.",
+      "replaces": "REC-LOG-B2"
     },
     {
       "METRIC-LABEL": "REC-LOG-B1",
@@ -91,7 +98,8 @@
     },
     {
       "METRIC-LABEL": "REC-LOG-B2",
-      "METRIC": "No more than the most recent one business day of data modifications will be lost."
+      "METRIC": "No more than the most recent one business day of data modifications will be lost.",
+      "replacedby": "REC-LOG-A1"
     },
     {
       "METRIC-LABEL": "REC-LOG-C1",
@@ -103,27 +111,35 @@
     },
     {
       "METRIC-LABEL": "REC-SIT-A1",
-      "METRIC": "The user detectable loss of functionality will be for an elapsed time of no more than one business day.  "
+      "METRIC": "The user detectable loss of functionality will be for an elapsed time of no more than one business day.  ",
+      "replaces": "REC-SIT-B1"
     },
     {
       "METRIC-LABEL": "REC-SIT-A2",
-      "METRIC": "No more than the most recent thirty minutes of data modifications will be lost. "
+      "METRIC": "No more than the most recent thirty minutes of data modifications will be lost. ",
+      "replaces": "REC-SIT-B2"
     },
     {
       "METRIC-LABEL": "REC-SIT-A3",
-      "METRIC": "The system at the alternate site will meet all pre-failure non-functional requirements other than site recoverability. "
+      "METRIC": "The system at the alternate site will meet all pre-failure non-functional requirements other than site recoverability. ",
+      "replaces": "REC-SIT-B3"
     },
     {
       "METRIC-LABEL": "REC-SIT-B1",
-      "METRIC": "The user detectable loss of business functionality will be an elapsed time of no more than five business days.  "
+      "METRIC": "The user detectable loss of business functionality will be an elapsed time of no more than five business days.  ",
+      "replaces": "REC-SIT-C1",
+      "replacedby": "REC-SIT-A1"
     },
     {
       "METRIC-LABEL": "REC-SIT-B2",
-      "METRIC": "No more than the most recent one business day of data modifications will be lost. "
+      "METRIC": "No more than the most recent one business day of data modifications will be lost. ",
+      "replaces": "REC-SIT-C2",
+      "replacedby": "REC-SIT-A2"
     },
     {
       "METRIC-LABEL": "REC-SIT-B3",
-      "METRIC": "The system at the alternate site will meet all pre-failure non-functional requirements other than site recoverability, resiliency and performance requirements.  "
+      "METRIC": "The system at the alternate site will meet all pre-failure non-functional requirements other than site recoverability, resiliency and performance requirements.  ",
+      "replacedby": "REC-SIT-A3"
     },
     {
       "METRIC-LABEL": "REC-SIT-B4",
@@ -131,11 +147,13 @@
     },
     {
       "METRIC-LABEL": "REC-SIT-C1",
-      "METRIC": "The user detectable loss of business functionality will be an elapsed time of no more than fifteen business days.  "
+      "METRIC": "The user detectable loss of business functionality will be an elapsed time of no more than fifteen business days.  ",
+      "replacedby": "REC-SIT-B1"
     },
     {
       "METRIC-LABEL": "REC-SIT-C2",
-      "METRIC": "No more than the most recent five business days of data modification will be lost."
+      "METRIC": "No more than the most recent five business days of data modification will be lost.",
+      "replacedby": "REC-SIT-B2"
     },
     {
       "METRIC-LABEL": "REC-SIT-C3",
@@ -151,7 +169,8 @@
     },
     {
       "METRIC-LABEL": "RES-ENV-A4",
-      "METRIC": "There will be no data loss"
+      "METRIC": "There will be no data loss",
+      "replaces": "RES-ENV-B2"
     },
     {
       "METRIC-LABEL": "RES-ENV-B1",
@@ -159,15 +178,18 @@
     },
     {
       "METRIC-LABEL": "RES-ENV-B2",
-      "METRIC": "No more than the most recent one business day of transactions will be lost.  "
+      "METRIC": "No more than the most recent one business day of transactions will be lost.  ",
+      "replacedby": "RES-ENV-A4"
     },
     {
       "METRIC-LABEL": "RES-HAR-B1",
-      "METRIC": "The user detectable loss of business functionality will be no more than ten minutes"
+      "METRIC": "The user detectable loss of business functionality will be no more than ten minutes",
+      "replaces": "RES-HAR-C1"
     },
     {
       "METRIC-LABEL": "RES-HAR-B2",
-      "METRIC": "No more than the single most recent in-flight transaction will be lost"
+      "METRIC": "No more than the single most recent in-flight transaction will be lost",
+      "replaces": "RES-HAR-C2"
     },
     {
       "METRIC-LABEL": "RES-HAR-B3",
@@ -175,31 +197,39 @@
     },
     {
       "METRIC-LABEL": "RES-HAR-B4",
-      "METRIC": "The system will continue to meet non-functional requirements other than resiliency requirements."
+      "METRIC": "The system will continue to meet non-functional requirements other than resiliency requirements.",
+      "replaces": "RES-HAR-D1"
     },
     {
       "METRIC-LABEL": "RES-HAR-C1",
-      "METRIC": "The user detectable loss of business functionality will be no more than one business day"
+      "METRIC": "The user detectable loss of business functionality will be no more than one business day",
+      "replacedby": "RES-HAR-B1"
     },
     {
       "METRIC-LABEL": "RES-HAR-C2",
-      "METRIC": "No more than the most recent one business day of data modifications will be lost"
+      "METRIC": "No more than the most recent one business day of data modifications will be lost",
+      "replaces": "RES-HAR-D2",
+      "replacedby": "RES-HAR-B2"
     },
     {
       "METRIC-LABEL": "RES-HAR-D1",
-      "METRIC": "The recovered system will meet all pre-failure functional and non-functional requirements."
+      "METRIC": "The recovered system will meet all pre-failure functional and non-functional requirements.",
+      "replacedby": "RES-HAR-B4"
     },
     {
       "METRIC-LABEL": "RES-HAR-D2",
-      "METRIC": "The system will meet System guideline 5.23.1.11, Data Backup"
+      "METRIC": "The system will meet System guideline 5.23.1.11, Data Backup",
+      "replacedby": "RES-HAR-C2"
     },
     {
       "METRIC-LABEL": "RES-SOF-B1",
-      "METRIC": "The user detectable loss of business functionality will be no more than ten minutes"
+      "METRIC": "The user detectable loss of business functionality will be no more than ten minutes",
+      "replaces": "RES-SOF-C1"
     },
     {
       "METRIC-LABEL": "RES-SOF-B2",
-      "METRIC": "No more than the single most recent in-flight transaction will be lost"
+      "METRIC": "No more than the single most recent in-flight transaction will be lost",
+      "replaces": "RES-SOF-C2"
     },
     {
       "METRIC-LABEL": "RES-SOF-B3",
@@ -207,31 +237,39 @@
     },
     {
       "METRIC-LABEL": "RES-SOF-B4",
-      "METRIC": "The system will continue to meet non-functional requirements other than resiliency requirements."
+      "METRIC": "The system will continue to meet non-functional requirements other than resiliency requirements.",
+      "replaces": "RES-SOF-D1"
     },
     {
       "METRIC-LABEL": "RES-SOF-C1",
-      "METRIC": "The user detectable loss of business functionality will be no more than one business day"
+      "METRIC": "The user detectable loss of business functionality will be no more than one business day",
+      "replacedby": "RES-SOF-B1"
     },
     {
       "METRIC-LABEL": "RES-SOF-C2",
-      "METRIC": "No more than the most recent one business day of data modifications will be lost"
+      "METRIC": "No more than the most recent one business day of data modifications will be lost",
+      "replaces": "RES-SOF-D2",
+      "replacedby": "RES-SOF-B2"
     },
     {
       "METRIC-LABEL": "RES-SOF-D1",
-      "METRIC": "The recovered system will meet all pre-failure functional and non-functional requirements."
+      "METRIC": "The recovered system will meet all pre-failure functional and non-functional requirements.",
+      "replacedby": "RES-SOF-B4"
     },
     {
       "METRIC-LABEL": "RES-SOF-D2",
-      "METRIC": "The system will meet System guideline 5.23.1.11, Data Backup"
+      "METRIC": "The system will meet System guideline 5.23.1.11, Data Backup",
+      "replacedby": "RES-SOF-C2"
     },
     {
       "METRIC-LABEL": "SCA-COM-A2",
-      "METRIC": "Adding and removing capacity results in a user detectable loss of business functionality no longer than Maintainability-Component Non-Functional Requirement, Level B."
+      "METRIC": "Adding and removing capacity results in a user detectable loss of business functionality no longer than Maintainability-Component Non-Functional Requirement, Level B.",
+      "replaces": "SCA-COM-D1"
     },
     {
       "METRIC-LABEL": "SCA-COM-D1",
-      "METRIC": "Adding and removing capacity results in no user detectable loss of business functionality"
+      "METRIC": "Adding and removing capacity results in no user detectable loss of business functionality",
+      "replacedby": "SCA-COM-A2"
     },
     {
       "METRIC-LABEL": "SEC-AWT-A1",
@@ -247,11 +285,13 @@
     },
     {
       "METRIC-LABEL": "SEC-AWT-C2",
-      "METRIC": "System administrator(s) must complete Public Jobs: Private Data D2L courses; Data Security in Your Job, Securing Your Computer Workstation and Using Data in the Workplace, Data Security for Faculty, Managers and Supervisors, Managing Student Data Securely, Managing Financial Data Securely and Managing Personnel Data Securely annually."
+      "METRIC": "System administrator(s) must complete Public Jobs: Private Data D2L courses; Data Security in Your Job, Securing Your Computer Workstation and Using Data in the Workplace, Data Security for Faculty, Managers and Supervisors, Managing Student Data Securely, Managing Financial Data Securely and Managing Personnel Data Securely annually.",
+      "replaces": "SEC-AWT-D1"
     },
     {
       "METRIC-LABEL": "SEC-AWT-D1",
-      "METRIC": "System administrator(s) must complete Public Jobs: Private Data D2L courses; Data Security in Your Job, Securing Your Computer Workstation and Using Data in the Workplace"
+      "METRIC": "System administrator(s) must complete Public Jobs: Private Data D2L courses; Data Security in Your Job, Securing Your Computer Workstation and Using Data in the Workplace",
+      "replacedby": "SEC-AWT-C2"
     },
     {
       "METRIC-LABEL": "SEC-CFA-A1",
@@ -267,15 +307,19 @@
     },
     {
       "METRIC-LABEL": "SEC-CFA-A4",
-      "METRIC": "The configuration of the system will be verified by automated rule based systems at intervals no longer than 7 days.  "
+      "METRIC": "The configuration of the system will be verified by automated rule based systems at intervals no longer than 7 days.  ",
+      "replaces": "SEC-CFA-B1"
     },
     {
       "METRIC-LABEL": "SEC-CFA-B1",
-      "METRIC": "The configuration of the system will be verified by automated rule based systems at intervals no longer than 30 days."
+      "METRIC": "The configuration of the system will be verified by automated rule based systems at intervals no longer than 30 days.",
+      "replaces": "SEC-CFA-C1",
+      "replacedby": "SEC-CFA-A4"
     },
     {
       "METRIC-LABEL": "SEC-CFA-B2",
-      "METRIC": "The configuration of the system will meet CIS level 1 or equivalent and differences documented"
+      "METRIC": "The configuration of the system will meet CIS level 1 or equivalent and differences documented",
+      "replaces": "SEC-CFA-C3"
     },
     {
       "METRIC-LABEL": "SEC-CFA-B3",
@@ -283,7 +327,8 @@
     },
     {
       "METRIC-LABEL": "SEC-CFA-C1",
-      "METRIC": "The configuration of the system will be verified by automated rule based systems at intervals no longer than 90 days."
+      "METRIC": "The configuration of the system will be verified by automated rule based systems at intervals no longer than 90 days.",
+      "replacedby": "SEC-CFA-B1"
     },
     {
       "METRIC-LABEL": "SEC-CFA-C2",
@@ -291,7 +336,9 @@
     },
     {
       "METRIC-LABEL": "SEC-CFA-C3",
-      "METRIC": "The configuration of the system will meet current vendor provided standard or benchmark."
+      "METRIC": "The configuration of the system will meet current vendor provided standard or benchmark.",
+      "replaces": "SEC-CFA-D1",
+      "replacedby": "SEC-CFA-B2"
     },
     {
       "METRIC-LABEL": "SEC-CFA-C4",
@@ -299,7 +346,8 @@
     },
     {
       "METRIC-LABEL": "SEC-CFA-D1",
-      "METRIC": "The configuration of the system will meet a documented standard or benchmark"
+      "METRIC": "The configuration of the system will meet a documented standard or benchmark",
+      "replacedby": "SEC-CFA-C3"
     },
     {
       "METRIC-LABEL": "SEC-CFA-D2",
@@ -307,7 +355,8 @@
     },
     {
       "METRIC-LABEL": "SEC-CFI-A1",
-      "METRIC": "A non-refutable log of all access and modifications to system configuration and system managed data will exist to Scale for a period of one year."
+      "METRIC": "A non-refutable log of all access and modifications to system configuration and system managed data will exist to Scale for a period of one year.",
+      "replaces": "SEC-CFI-B1"
     },
     {
       "METRIC-LABEL": "SEC-CFI-A2",
@@ -315,11 +364,13 @@
     },
     {
       "METRIC-LABEL": "SEC-CFI-A3",
-      "METRIC": "The Incident Response process in System Guideline 5.23.1.4 is tested annually."
+      "METRIC": "The Incident Response process in System Guideline 5.23.1.4 is tested annually.",
+      "replaces": "SEC-CFI-D3"
     },
     {
       "METRIC-LABEL": "SEC-CFI-B1",
-      "METRIC": "A non-refutable log of all access and modifications to system configuration by accounts with privileges sufficient to modify system configuration will exist to Scale for a period of one year."
+      "METRIC": "A non-refutable log of all access and modifications to system configuration by accounts with privileges sufficient to modify system configuration will exist to Scale for a period of one year.",
+      "replacedby": "SEC-CFI-A1"
     },
     {
       "METRIC-LABEL": "SEC-CFI-B2",
@@ -327,7 +378,8 @@
     },
     {
       "METRIC-LABEL": "SEC-CFI-B3",
-      "METRIC": "Access and modification of system configuration will be conducted using privileges limited to the minimum required to complete the activity."
+      "METRIC": "Access and modification of system configuration will be conducted using privileges limited to the minimum required to complete the activity.",
+      "replaces": "SEC-CFI-D4"
     },
     {
       "METRIC-LABEL": "SEC-CFI-D1",
@@ -339,31 +391,39 @@
     },
     {
       "METRIC-LABEL": "SEC-CFI-D3",
-      "METRIC": "A process exists that meets System Guideline 5.23.1.4, Incident Response"
+      "METRIC": "A process exists that meets System Guideline 5.23.1.4, Incident Response",
+      "replacedby": "SEC-CFI-A3"
     },
     {
       "METRIC-LABEL": "SEC-CFI-D4",
-      "METRIC": "Systems classified as Highly Restricted or Restricted must be administered by personnel using least privilege"
+      "METRIC": "Systems classified as Highly Restricted or Restricted must be administered by personnel using least privilege",
+      "replacedby": "SEC-CFI-B3"
     },
     {
       "METRIC-LABEL": "SEC-DAC-A1",
-      "METRIC": "Multi-factor authentication is required for each individual accessing or modifying the system configuration or system managed Highly Restrictred or Restricted data."
+      "METRIC": "Multi-factor authentication is required for each individual accessing or modifying the system configuration or system managed Highly Restrictred or Restricted data.",
+      "replaces": "SEC-DAC-B2"
     },
     {
       "METRIC-LABEL": "SEC-DAC-A2",
-      "METRIC": "Individual access to the system and data is reviewed every 6 months."
+      "METRIC": "Individual access to the system and data is reviewed every 6 months.",
+      "replaces": "SEC-DAC-C2"
     },
     {
       "METRIC-LABEL": "SEC-DAC-A3",
-      "METRIC": "Default deny logical controls exist between all security perimeters."
+      "METRIC": "Default deny logical controls exist between all security perimeters.",
+      "replaces": "SEC-DAC-C5"
     },
     {
       "METRIC-LABEL": "SEC-DAC-B1",
-      "METRIC": "The system will maintain a non-refutable log of all access and modifications to system configuration and system managed data sufficiently to determine the individual, IP address, date/time."
+      "METRIC": "The system will maintain a non-refutable log of all access and modifications to system configuration and system managed data sufficiently to determine the individual, IP address, date/time.",
+      "replaces": "SEC-DAC-C1"
     },
     {
       "METRIC-LABEL": "SEC-DAC-B2",
-      "METRIC": "Multi-factor authentication is required for each individual accessing or modifying the system configuration."
+      "METRIC": "Multi-factor authentication is required for each individual accessing or modifying the system configuration.",
+      "replaces": "SEC-DAC-D2",
+      "replacedby": "SEC-DAC-A1"
     },
     {
       "METRIC-LABEL": "SEC-DAC-B3",
@@ -387,11 +447,13 @@
     },
     {
       "METRIC-LABEL": "SEC-DAC-C1",
-      "METRIC": "System administrator and user access and event logging is implemented"
+      "METRIC": "System administrator and user access and event logging is implemented",
+      "replacedby": "SEC-DAC-B1"
     },
     {
       "METRIC-LABEL": "SEC-DAC-C2",
-      "METRIC": "Individual access to the system and data is reviewed annually"
+      "METRIC": "Individual access to the system and data is reviewed annually",
+      "replacedby": "SEC-DAC-A2"
     },
     {
       "METRIC-LABEL": "SEC-DAC-C3",
@@ -403,7 +465,8 @@
     },
     {
       "METRIC-LABEL": "SEC-DAC-C5",
-      "METRIC": "Default deny logical controls exist between lower and higher security perimeters."
+      "METRIC": "Default deny logical controls exist between lower and higher security perimeters.",
+      "replacedby": "SEC-DAC-A3"
     },
     {
       "METRIC-LABEL": "SEC-DAC-D1",
@@ -411,7 +474,8 @@
     },
     {
       "METRIC-LABEL": "SEC-DAC-D2",
-      "METRIC": "Credentials used to access the system or data meet requirements defined in International Standards Organization (ISO) 27001 and 27002, section 9.4.2 - \"access to systems and applications shall be controlled by a secure log-on procedure\", and section 9.4.3 - \"password management systems shall be interactive and shall ensure quality passwords.\""
+      "METRIC": "Credentials used to access the system or data meet requirements defined in International Standards Organization (ISO) 27001 and 27002, section 9.4.2 - \"access to systems and applications shall be controlled by a secure log-on procedure\", and section 9.4.3 - \"password management systems shall be interactive and shall ensure quality passwords.\"",
+      "replacedby": "SEC-DAC-B2"
     },
     {
       "METRIC-LABEL": "SEC-DAC-D3",
@@ -423,23 +487,28 @@
     },
     {
       "METRIC-LABEL": "SEC-DCL-A1",
-      "METRIC": "Individual elements of the data managed by the system have assigned owners"
+      "METRIC": "Individual elements of the data managed by the system have assigned owners",
+      "replaces": "SEC-DCL-D1"
     },
     {
       "METRIC-LABEL": "SEC-DCL-A2",
-      "METRIC": "Each data element of the system has been classified to Scale"
+      "METRIC": "Each data element of the system has been classified to Scale",
+      "replaces": "SEC-DCL-D2"
     },
     {
       "METRIC-LABEL": "SEC-DCL-D1",
-      "METRIC": "The data managed by the system has an assigned owner"
+      "METRIC": "The data managed by the system has an assigned owner",
+      "replacedby": "SEC-DCL-A1"
     },
     {
       "METRIC-LABEL": "SEC-DCL-D2",
-      "METRIC": "The data managed by the system has been classified to Scale"
+      "METRIC": "The data managed by the system has been classified to Scale",
+      "replacedby": "SEC-DCL-A2"
     },
     {
       "METRIC-LABEL": "SEC-DEN-A1",
-      "METRIC": "Data classified as Highly Restricted or Restricted is encrypted to Scale when stored, transported or transmitted."
+      "METRIC": "Data classified as Highly Restricted or Restricted is encrypted to Scale when stored, transported or transmitted.",
+      "replaces": "SEC-DEN-D3"
     },
     {
       "METRIC-LABEL": "SEC-DEN-A2",
@@ -467,7 +536,8 @@
     },
     {
       "METRIC-LABEL": "SEC-DEN-D3",
-      "METRIC": "Data classified as Highly Restricted or Restricted stored, transported or transmitted outside of a HIGH RISK network or perimeter is encrypted to Scale"
+      "METRIC": "Data classified as Highly Restricted or Restricted stored, transported or transmitted outside of a HIGH RISK network or perimeter is encrypted to Scale",
+      "replacedby": "SEC-DEN-A1"
     }
   ]
 }
