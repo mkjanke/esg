@@ -51,7 +51,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -59,31 +59,45 @@
                 </div>
                 <ul class="nav navbar-nav">
                     <li><a href="../html/metrics.html">Metrics</a></li>
-                    <li class="active"> <a href="../html/nfrs.html">NFR's</li>
+                    <li class="active"> <a href="../html/nfrs.html">NFR's</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
             </div>
         </nav>
 
-        <div id="wait">
-            <p>Please Wait...</p>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div id="wait">
+                    <p>Please Wait...</p>
+                </div>
+                <div id="showData" class="table-responsive">
+                    <table width="100%" class="display" id="NFRTable" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Index</th>
+                                <th>Category</th>
+                                <th>Context</th>
+                                <th>Goals</th>
+                                <th>Rationale</th>
+                                <th>Requirement</th>
+                                <th>Scale</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
         </div>
-        <div id="showData" class="table-responsive">
-            <table width="100%" class="display" id="NFRTable" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>Index</th>
-                        <th>Category</th>
-                        <th>Context</th>
-                        <th>Goals</th>
-                        <th>Rationale</th>
-                        <th>Requirement</th>
-                        <th>Scale</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-            </table>
-        </div>
+        <nav class="navbar navbar-default navbar-fixed-bottom">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">ESG -Minnesota State</a>
+                </div>
+            </div>
+        </nav>
     </div>
- 
 </body>
 </html>
