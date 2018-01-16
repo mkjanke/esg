@@ -123,11 +123,31 @@
     {
       "Index": "SEC-CFA",
       "Category": "Security",
-      "Context": "Configuratino Assessment",
+      "Context": "Configuration Assessment",
       "Goals": "Goals:  A systems initial configuration must be resistant to unauthorized access or modification of configuration and data. The system must be maintained in a resistant configuration for the life of the system, and must be verified by appropriate means. System administration activities must be conducted with privileges limited to the minimum required to complete the activity.",
       "Rationale": "Rationale: If the confidentiality and integrity of the data managed by the system is critical, the system must be configured and maintained in a secure state, resistant to unauthorized configuration and data modifications. To ensure that the system is maintained in that state, the configuration of the system must be verified at periodic intervals.",
       "Requirement": "Requirement: The system must be configured to Metric. The configuration must be verified to Metric.  Administrative functions must be conducted according to Metric.",
       "Scale": "Scale: Configuration Standard: CIS Benchmark. Patch Management Interval: Duration, System guideline 5.23.1.5, Security Patch Management. Configuration Assessment: Interval, Days.",
+      "Status": "Approved, Requirement"
+    },
+    {
+      "Index": "SCA-COM",
+      "Category": "Scalability",
+      "Context": "Component",
+      "Goals": "Goals: Systems will be designed such that the capacity of the system can be increased or decreased by adding or removing hardware or software components.",
+      "Rationale": "Rationale: If the availability and performance requirements of a system are sufficiently critical, the system must have the capability of cost effectively matching the system capacity to system load.",
+      "Requirement": "Requirement: Additions to, or subtractions from the capacity of a system shall not cause user detectable loss of business functionality for an elapsed time more than Metric.",
+      "Scale": "Scale: Availability: Duration, elapsed time.",
+      "Status": "Approved, Requirement"
+    },
+    {
+      "Index": "SEC-DEN",
+      "Category": "Security",
+      "Context": "Data Encryption",
+      "Goals": "Goals: Data classified as Highly Restricted or Restricted must not be exposed to unauthorized parties. When Highly Restricted or Restricted data is stored or transmitted in a manner that may result in exposure, the data must be rendered unreadable to the unauthorized party.",
+      "Rationale": "Rationale: Data stewards are obligated to minimize the probability of unintentional exposure of Highly Restricted or Restricted data to unauthorized parties.",
+      "Requirement": "Requirement: When data classified as Highly Restricted or Restricted is stored outside of a higher risk network or perimeter, the data will be stored non-readable to Metric. When data classified as Highly Restricted or Restricted is physically or logically transported or transmitted to a higher risk network or perimeter, the data will be rendered non-readable to Metric.",
+      "Scale": "Transport Encryption: [TBD] Storage Encryption: System Guideline 5.23.1.2, Encryption for Mobile Computing and Storage, Devices, Subpart A and B. Key Recovery: System Guideline 5.23.1.2, Encryption for Mobile Computing and Storage, Devices, Subpart D ",
       "Status": "Approved, Requirement"
     }
 ]
